@@ -28,21 +28,23 @@ public class MainActivity extends AppCompatActivity {
                 while (true) {
                     //We create a try catch block to catch any errors
                     try {
-                        //We take the end time and the now time and subtract them to get the difference
-                        long difference = 1735680000000L - System.currentTimeMillis();
-                        //We create a variable to store the seconds
+                        //We convert the end date 31 August 2024 at 23:59:59 to milliseconds
+                        long endDate = 1725141540000L;
+                        //We take the end date (31 August 2024 at 23:59:59) and the now time and subtract them to get the difference
+                        long difference = (endDate - System.currentTimeMillis());
+                        //We divide the difference by 1000 to get the seconds
                         long seconds = difference / 1000;
-                        //We create a variable to store the minutes
+                        //We divide the seconds by 60 to get the minutes
                         long minutes = seconds / 60;
-                        //We create a variable to store the hours
+                        //We divide the minutes by 60 to get the hours
                         long hours = minutes / 60;
-                        //We create a variable to store the days
+                        //We divide the hours by 24 to get the days
                         long days = hours / 24;
-                        //We create a variable to store the months
+                        //We divide the days by 30 to get the months
                         long months = days / 30;
-                        //We create a variable to store the years
+                        //We divide the months by 12 to get the years
                         long years = months / 12;
-
+                        //We set the text of the TextView to the countdown
                         //We display the countdown in the TextView
                         runOnUiThread(new Runnable() {
                             @Override
