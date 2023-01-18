@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //We want to create a countdown to the 31 August 2024 at 23:59:59
+        //We want to create a countdown to the 19 July 2024 at 13:00:00
         //We want to display the countdown in the format: 00 years 00 months 00 days 00 hours 00 minutes 00 seconds
         //We want to update the countdown every second
         //We want to display the countdown in a TextView
@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
                 while (true) {
                     //We create a try catch block to catch any errors
                     try {
-                        //We convert the end date 31 August 2024 at 23:59:59 to milliseconds
-                        long endDate = 1725141540000L;
+                        //We convert the end date 19 July 2024 at 13:00:00 to milliseconds
+                        long endDate = 1721386800000L;
                         //We take the end date (31 August 2024 at 23:59:59) and the now time and subtract them to get the difference
                         long difference = (endDate - System.currentTimeMillis());
                         //We divide the difference by 1000 to get the seconds
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                countdown.setText(String.format("%02d years \n %02d months \n %02d days \n %02d hours \n %02d minutes \n %02d seconds", years, months % 12, days % 30, hours % 24, minutes % 60, seconds % 60));
+                                countdown.setText(String.format("%02d years\n%02d months\n%02d days\n%02d hours\n%02d minutes\n%02d seconds", years, months % 12, days % 30, hours % 24, minutes % 60, seconds % 60));
                             }
                         });
                         //We make the thread sleep for 1 second
