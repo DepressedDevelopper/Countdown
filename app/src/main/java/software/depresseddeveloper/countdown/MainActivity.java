@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
                 while (true) {
                     //We create a try catch block to catch any errors
                     try {
-                        //We convert the end date 19 July 2024 at 13:00:00 to milliseconds
-                        long endDate = 1721386800000L;
+                        //We convert the end date 19 July 2023 at 13:00:00 to milliseconds
+                        long endDate = 1689764400000L;
                         //We take the end date (31 August 2024 at 23:59:59) and the now time and subtract them to get the difference
                         long difference = (endDate - System.currentTimeMillis());
                         //We divide the difference by 1000 to get the seconds
